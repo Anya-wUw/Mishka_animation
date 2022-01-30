@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    min-height: 100vh;
+    background: rgb(182, 223, 142);
+}
+
+svg{
+    width: 100%;
+    height: 100vh;
+    padding: 30px 40px;
+
+}
+
+#paws,
+#body{
+    cursor: pointer;
+    transform-box: fill-box;
+}
+
+#head,
+#ears{
+    animation: head ease-in-out 1.6s infinite alternate;
+    transform-origin: bottom;
+}
+@keyframes head{
+    0%{transform: rotate(1deg);}
+    100%{transform: rotate(-1deg);}
+}
+
+#body{
+    animation: body ease-in-out 1.65s infinite alternate;
+    transform-origin: bottom;
+}
+@keyframes body{
+    0%{transform: rotate(2.5deg);}
+    100%{transform: rotate(-2.5deg);}
+}
+
+#eyes{
+    animation: blink 4s step-end infinite both;
+    transform-origin:center;
+}
+@keyframes blink{
+
+    from, to, 10%, 25%, 80%{
+        transform: scaleY(1);
+    }
+    8%, 23%, 78%{
+        transform: scaleY(0.7);
+    }
+}
+
+#eyes_1_{
+    animation: head ease-in-out 1.6s infinite alternate;
+    transform-origin: bottom;
+}
+
+#paws_x5F_l{
+    animation: pawsl 0.2s linear alternate-reverse infinite;
+}
+@keyframes pawsl{
+    100% {
+        transform: translateX(-5px);    
+      }
+}
+
+#paws_x5F_r{
+    animation: pawsr 0.2s linear alternate-reverse infinite;
+}
+@keyframes pawsr{
+    100% {
+        transform: translateX(5px);    
+      }
+}
+
+#heart{
+
+    animation-name: anime;
+		/* имя кейфрейма для анимации */
+	animation-duration: 0.2s;
+		/* длительность анимации */
+	animation-iteration-count: infinite;
+		/* количество повторений, в данном случае - бесконечно */
+	animation-direction: alternate;
+		/* проигрывать анимацию в прямом и в обратном порядке */
+	animation-timing-function: ease-in;
+}
+@keyframes anime {
+	from {
+		transform: scale(1);
+	}
+	to {
+		transform: scale(1.01);
+	}
+}
